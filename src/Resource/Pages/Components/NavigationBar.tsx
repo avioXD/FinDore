@@ -7,7 +7,10 @@ function NavigationBar() {
       <Container fluid className="flex-center ">
         <Container style={{ maxWidth: "60rem" }} className="mx-2">
           <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#" className="title-primary animate-char-dark">
+            <Navbar.Brand
+              href="#"
+              className="title-primary h-2 animate-char-dark"
+            >
               FinDoor
             </Navbar.Brand>
             <Navbar.Toggle

@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $color-800: #531319;
-$color-200: rgba(255, 133, 77, 1);
+$color-200: #ff725e;
 $color-400: #aa2a3d;
 $white: #fffffe;
 $dark: #361c20;
@@ -15,6 +15,12 @@ $waring-color: #ffbb33;
 $gray: #ffe1e1;
 $shadow-1: rgba(255, 133, 77, 0.616);
 $shadow-2: #e74757c0;
+$card-background: linear-gradient(
+  90deg,
+  rgba(170, 42, 61, 1) 1%,
+  rgba(214, 57, 81, 1) 52%,
+  rgba(255, 133, 77, 1) 100%
+);
 $transition-speed: 0.3s;
 $theme-colors: (
   "primary": $color-200,
@@ -30,6 +36,7 @@ $theme-colors: (
   "active": $white,
 );
 $Raleway: "Raleway", sans-serif;
+$Outfit: "Outfit", sans-serif;
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
 @import "~swiper/css";
@@ -66,21 +73,33 @@ $Raleway: "Raleway", sans-serif;
 }
 .c-background {
   min-height: 80vh;
-  background: linear-gradient(
-    90deg,
-    rgba(170, 42, 61, 1) 1%,
-    rgba(214, 57, 81, 1) 52%,
-    rgba(255, 133, 77, 1) 100%
-  );
+  background: $card-background;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+// images
 img {
   width: 100%;
   padding: 2rem;
   max-width: 30rem;
 }
+.w-h-15 {
+  max-height: 15rem;
+  max-width: 15rem;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.w-h-10 {
+  max-height: 10rem;
+  max-width: 10rem;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.h-100 {
+  height: max-content;
+}
+
 // NavCss
 .nav-link {
   color: $color-200 !important;
@@ -158,8 +177,13 @@ img {
 }
 
 //Text
+.h-1 {
+  font-size: 260%;
+}
+.h-2 {
+  font-size: 200%;
+}
 .title-primary {
-  font-size: 250%;
   font-weight: "900";
   color: $white;
   font-family: $Raleway;
@@ -183,12 +207,12 @@ img {
 .text-white {
   font-weight: "400";
   color: $white;
-  line-height: 90%;
 }
 .text-sm {
   font-size: 85%;
-  opacity: 0.8;
-  color: $dark;
+}
+.bold {
+  font-weight: 700;
 }
 .text-link {
   text-decoration: none;
@@ -201,14 +225,73 @@ img {
     opacity: 0.8;
   }
 }
+.bright-text {
+  filter: brightness(2);
+}
+.text-divider-dark {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: $color-400;
+  font-family: $Outfit;
+  font-weight: 500;
+  font-weight: 500;
+  &::after {
+    content: "";
+    width: "100%";
+    height: 2px;
+    display: inline-block;
+    background: $card-background;
+    margin: 6px 10px;
+    text-align: center;
+  }
+  &::before {
+    content: "";
+    width: "100%";
+    height: 2px;
+    display: inline-block;
+    background: $card-background;
+    margin: 6px 10px;
+  }
+}
+.text-divider {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: $white;
+  font-family: $Outfit;
+  font-weight: 500;
+  font-weight: 500;
+  &::after {
+    content: "";
+    min-width: 30px;
+    height: 2px;
+    display: inline-block;
+    background: $card-background;
+    margin: 6px 10px;
+    text-align: center;
+    filter: brightness(2);
+  }
+  &::before {
+    content: "";
+    min-width: 30px;
+    height: 2px;
+    display: inline-block;
+    background: $card-background;
+    margin: 6px 10px;
+    filter: brightness(2);
+  }
+}
+
 .animate-char-dark {
   background-image: linear-gradient(
     -225deg,
-    #ffbc40 0%,
-    #ff6767 29%,
-    #ff4242 55%,
-    #ff943c 85%,
-    #ffbc40 100%
+    #ffdd1d 0%,
+    #ff5b19 29%,
+    #ff1c1c 55%,
+    rgba(255, 133, 77, 1) 85%,
+    #ffdd1d 100%
   );
 
   background-size: auto auto;
@@ -223,14 +306,13 @@ img {
   display: inline-block;
 }
 .animate-char {
-  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #ffd88f 0%,
-    #ffb9b9 29%,
-    #fce1e1 55%,
-    #ffe0c6 85%,
-    #ffd88f 100%
+    #fae466 0%,
+    #fca165 30%,
+    #ffffff 50%,
+    #fca367 70%,
+    #fae466 100%
   );
 
   background-size: auto auto;
@@ -238,7 +320,6 @@ img {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 5s linear infinite;
@@ -250,9 +331,11 @@ img {
     background-position: 200% center;
   }
 }
-//card
 
+//card
 .card {
+  border: 0;
+
   .card-title {
     font-weight: "100";
     color: $color-200;
@@ -260,6 +343,7 @@ img {
     text-align: center;
     font-size: 100%;
   }
+  filter: drop-shadow(1px 1px 2px $shadow-2);
   .card-text {
     text-align: center;
     color: $dark-offset;
@@ -267,8 +351,45 @@ img {
   }
 }
 
+.card-3d {
+  width: 100%;
+  min-height: 25rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px $shadow-1;
+  background: $card-background;
+  transition: transform $transition-speed;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+//////////////@inputs
+.form-control,
+.form-select,
+input,
+textarea {
+  border: 2px solid $color-200;
+  outline: none;
+  padding: 0.2rem 0.5rem;
+  font-family: $Outfit;
+  font-weight: 500;
+  font-size: 100%;
+  outline: none !important;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  color: $dark-offset !important;
+  &:focus {
+    outline: none !important;
+    box-shadow: none;
+    border: 2px solid $color-400;
+  }
+}
+
+//////////////////
 .swiper-wrapper {
   padding-bottom: 2.5rem !important;
+  overflow: visible !important;
+  background: transparent;
 }
 .swiper-pagination-bullet-active {
   background-color: $color-200;
