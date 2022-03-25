@@ -17,24 +17,21 @@ import {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { default as HeroImg } from "../../assets/images/hero-img.svg";
-import { default as whoweare } from "../../assets/images/why-us.svg";
+import whoweare from "../../assets/images/whoweare.svg";
 import { default as Pricing } from "../../assets/images/pricing.svg";
-import { default as whyus } from "../../assets/images/why_us/whyus.svg";
+
 import { default as files } from "../../assets/images/us/files.svg";
 import { default as taxsave } from "../../assets/images/us/taxsave.svg";
 import { default as happycustomer } from "../../assets/images/us/happycustomer.svg";
-import {
-  hero_swiper_content,
-  pricingCards,
-  whyUsContent,
-} from "../../content/content";
+import { hero_swiper_content, pricingCards } from "../../content/content";
 import RequestToUs from "./Components/PageParts/RequestToUs";
+import WhyUsSlider from "./Components/PageParts/WhyUsSlider";
 
 const CardComp = (props) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem" }} className="designed-background">
       <Card.Body>
-        <Card.Title>{props.value.label}</Card.Title>
+        <Card.Title className="text-between">{props.value.label}</Card.Title>
         <Card.Text>{props.value.content}</Card.Text>
       </Card.Body>
     </Card>
@@ -59,20 +56,24 @@ const CardService = (props) => {
         slideShadows: false,
       }}
       breakpoints={{
+        450: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
         640: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 5,
         },
         768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
+          slidesPerView: 3,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 30,
         },
       }}
-      // pagination={true}
+      pagination={{ clickable: true }}
       modules={[EffectCoverflow, Pagination]}
       className="p-5 pt-4 m-swiper"
     >
@@ -82,7 +83,7 @@ const CardService = (props) => {
             <>
               {""}
               <SwiperSlide className="flex-center">
-                <div className="card-3d text-start flex-column">
+                <div className="card-3d text-start flex-column  ">
                   <h3 className="subtitle-primary animate-char  bold">
                     {x.label}
                   </h3>
@@ -100,47 +101,6 @@ const CardService = (props) => {
           return <></>;
         }
       })}
-    </Swiper>
-  );
-};
-
-const WhyUsSlider = () => {
-  return (
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      rewind={true}
-      className="p-3"
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
-      }}
-      freeMode={true}
-      autoplay={true}
-      pagination={{ clickable: true }}
-    >
-      {whyUsContent.map((x) => (
-        <>
-          {" "}
-          <SwiperSlide className="flex-center  ">
-            <div className="card p-3 mt-4 h-100">
-              <img src={x.img} alt="" className="w-h-15 mx-auto" />
-              <h6 className="subtitle-primary text-center">{x.label}</h6>
-              <p className="text-sm text-center">{x.content}</p>
-            </div>
-          </SwiperSlide>
-        </>
-      ))}
     </Swiper>
   );
 };
@@ -167,7 +127,7 @@ export const Home = () => {
             <Col sm={12} className="d-flex justify-content-center">
               <div className="p-3 my-auto mt-4 ">
                 <p className="title-primary h-1 text-warp text-center animate-char text-uppercase">
-                  Welcome to FinDoor
+                  Welcome to Kbiafiling
                 </p>
                 <p className="text-white text-center">
                   Committed towards eminent tax & financial assistance!
@@ -187,38 +147,41 @@ export const Home = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="p-3 mx-auto mt-5">
-          <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            rewind={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-              },
-            }}
-            freeMode={true}
-            autoplay={true}
-            pagination={{ clickable: true }}
-          >
-            {hero_swiper_content.map((x) => (
-              <>
-                {" "}
-                <SwiperSlide className="flex-center">
-                  <CardComp value={x} />
-                </SwiperSlide>
-              </>
-            ))}
-          </Swiper>
+
+        <Container fluid className="doted-background">
+          <Container className="p-3 mx-auto mt-5">
+            <Swiper
+              // install Swiper modules
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              rewind={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
+              freeMode={true}
+              autoplay={true}
+              pagination={{ clickable: true }}
+            >
+              {hero_swiper_content.map((x) => (
+                <>
+                  {" "}
+                  <SwiperSlide className="flex-center">
+                    <CardComp value={x} />
+                  </SwiperSlide>
+                </>
+              ))}
+            </Swiper>
+          </Container>
         </Container>
       </Container>
       <Container fluid className="d-flex justify-content-center flex-column  ">
@@ -299,45 +262,39 @@ export const Home = () => {
         <Container className="mx-auto">
           <CardService radioValue={radioValue} />
         </Container>
-        <Container className="mx-auto">
-          <Row>
-            <Col sm={12} className="">
-              <img src={whyus} className="w-h-10 p-1" alt="" />
-              <h1 className="title-secondary h-1 mt-5 animate-char-dark">
-                Why Us!
-              </h1>
-            </Col>
-          </Row>
-
-          <Container>
-            {" "}
-            <WhyUsSlider />
+        <WhyUsSlider />
+        <Container fluid className="doted-background">
+          <Container className="mx-auto">
+            <Row>
+              <Col sm={4}>
+                <div className="flex-center p-4 flex-column">
+                  <img src={taxsave} alt="" className="w-h-15" />
+                  <h2 className="text-primary">50 lakhs+</h2>
+                  <h4 className="text-uppercase title-primary text-between">
+                    Tax Saved
+                  </h4>
+                </div>
+              </Col>
+              <Col sm={4}>
+                <div className="flex-center p-4 flex-column">
+                  <img src={happycustomer} alt="" className="w-h-15" />
+                  <h2 className="text-primary">500+</h2>
+                  <h4 className="text-uppercase title-primary text-between">
+                    Happy Customers
+                  </h4>
+                </div>
+              </Col>
+              <Col sm={4}>
+                <div className="flex-center p-4 flex-column">
+                  <img src={files} alt="" className="w-h-15" />
+                  <h2 className="text-primary">1000+</h2>
+                  <h4 className="text-uppercase title-primary text-between">
+                    Returned Field
+                  </h4>
+                </div>
+              </Col>
+            </Row>
           </Container>
-        </Container>
-        <Container className="mx-auto">
-          <Row>
-            <Col sm={4}>
-              <div className="flex-center p-4 flex-column">
-                <img src={taxsave} alt="" className="w-h-15" />
-                <h2 className="text-primary">50 lakhs+</h2>
-                <h4 className="text-sm text-uppercase">Tax Saved</h4>
-              </div>
-            </Col>
-            <Col sm={4}>
-              <div className="flex-center p-4 flex-column">
-                <img src={happycustomer} alt="" className="w-h-15" />
-                <h2 className="text-primary">500+</h2>
-                <h4 className="text-sm text-uppercase">Happy Customers</h4>
-              </div>
-            </Col>
-            <Col sm={4}>
-              <div className="flex-center p-4 flex-column">
-                <img src={files} alt="" className="w-h-15" />
-                <h2 className="text-primary">1000+</h2>
-                <h4 className="text-sm text-uppercase">Returned Field</h4>
-              </div>
-            </Col>
-          </Row>
         </Container>
         <RequestToUs />
       </Container>

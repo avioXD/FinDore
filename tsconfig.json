@@ -23,5 +23,5 @@
   "include": [
     "src",
     "assets"
-  ]
+, "webpack.config.js"  ]
 }

@@ -17,8 +17,8 @@ function RequestToUs() {
       </h1>
       <Row>
         <Col sm={8} className="mx-auto">
-          <Card className="p-3 ">
-            <p className="text-primary text-center">
+          <Card className="p-3 designed-background">
+            <p className="text-between text-center">
               Don’t stress, just secure your financial goals!
             </p>
             <Form>
@@ -39,15 +39,42 @@ function RequestToUs() {
                   </Col>
                 </Row>
                 <Form.Select aria-label="Default select example">
-                  <option>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="1">Service Required</option>
+                  <option value="TDS Return">TDS Return</option>
+                  <option value="GST Return">GST Return</option>
+                  <option value="Business Registrations">
+                    Business Registrations
+                  </option>
+                  <option value="Digital Signature">Digital Signature</option>
+                  <option value="Business Incorporation">
+                    Business Incorporation
+                  </option>
+                  <option value="MCA Compliance">MCA Compliance</option>
+                  <option value="Income Tax">Income Tax</option>
+                  <option value="Consultancy Services">
+                    Consultancy Services
+                  </option>
+                  <option value="Miscellaneous Services">
+                    Miscellaneous Services
+                  </option>
                 </Form.Select>
+                <FloatingLabel controlId="floatingComments" label="Comments">
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: "100px" }}
+                  />
+                </FloatingLabel>
               </Form.Group>
-              <Button variant="primary" className="m-btn" type="submit">
-                Submit
-              </Button>
+              <div className="flex-center">
+                <Button
+                  variant="primary"
+                  className="m-btn mx-auto"
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </div>
             </Form>
           </Card>
         </Col>

@@ -115,3 +115,59 @@ export const whyUsContent = [
     us and focus on your business.`,
   },
 ];
+
+export const serviceContent = [
+  {
+    key: "0",
+    label: `Solution to all your tax and financial needs Services We Offer:`,
+    content: `We offer a wide range of services to cover all your compliance & financial needs. Our team of tax and subject matter experts are here to help you manage your tax and other business compliances. Right from business and tax registrations to periodic compliance return filings, accounting, finance management and more, all types of services are offered by us.
+    If you don't find required services listed in the pricing, reach out to us for quote for custom service and we will be happy to help you.`,
+    points: `<p><strong  >Some of the key services we offer are:</strong></p>
+    <ul>
+        <li>Business Registration &amp; Company Incorporation</li>
+        <li>Tax Registrations &amp; Licences</li>
+        <li>Taxation consultancy</li>
+        <li>Income Tax Return filing</li>
+        <li>Corporate compliance filings</li>
+        <li>GST &amp; TDS Return filing</li>
+        <li>Trademark registration</li>
+        <li>Financial consultancy</li>
+    </ul>`,
+  },
+  {
+    key: "1",
+    label: `Tax Return Filing`,
+    content: `In general, there are two types of taxes in India – direct tax and indirect tax. Direct tax is a tax that is calculated and paid directly on your Income e.g. tax on salary etc. Income tax is a direct tax. Indirect tax is a tax that is indirectly charged to you on purchase of goods or use of service e.g. Buying a mobile phone or eating in a fast food joint. The seller of the mobile phone or the fast food service provider charges you tax and then deposits the same to the Government account. Most indirect taxes are now covered under Goods and Services Tax (GST), a comprehensive, multistage, destination-based tax. Everyone who earns income above a certain amount is subject to income tax. Your income could be from salary, interest income from savings, income from mutual funds, sale of property or business or professional income. Income tax rates are pre-decided at the start of the year in the Union Budget (in the Parliament of India). The tax paid or deducted on these incomes is called the income tax. Filing income tax is every citizen’s responsibility. The IT department verifies these declarations of income and if any amount has been paid in excess, the department refunds the amount to the assessee’s bank account. All entities are required to file the taxes on time to avoid penalty. The form that contains information of income and tax paid of an assessee is called Income Tax Return. The Income Tax Department of India has various forms for it such as ITR 1, ITR 2, ITR 3, ITR 4S, ITR 5, ITR 6 and ITR 7.`,
+    points: `<p>What do we offer in Tax Return Filing?</p>
+    <ul>
+        <li>Income Tax Return filing for individual</li>
+        <li>Income Tax Return filing for business</li>
+        <li>GST Return Filing</li>
+        <li>TDS Return Filing</li>
+        <li>Notice Management</li>
+        <li>Handling Tax Assessment</li>
+    </ul>`,
+  },
+  {
+    key: "2",
+    label: `License & Trademarks`,
+    content: ` `,
+    points: `<p><strong>What do we oﬀer in Tax Return Filing?</strong></p>
+    <ul>
+        <li>Trademark, Patent &amp; copyrights</li>
+        <li>FSSAI License</li>
+        <li>Digital Signature</li>
+    </ul>`,
+  },
+  {
+    key: "3",
+    label: `Financial Consultancy`,
+    content: ` `,
+    points: `<p><strong>What do we oﬀer in Tax Return Filing?</strong></p>
+    <ul>
+        <li>Financial Advisory for Mutual Funds</li>
+        <li>Portfolio management services</li>
+        <li>Customized Services</li>
+    </ul>`,
+  },
+];

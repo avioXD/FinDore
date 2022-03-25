@@ -1,12 +1,12 @@
 import React from "react";
 
 import "./App.css";
-import { Route } from "./Resource/Router";
+import { RouteComponent } from "./Resource/Router";
 
 function App() {
   return (
     <>
-      <Route></Route>
+      <RouteComponent></RouteComponent>
     </>
   );
 }
