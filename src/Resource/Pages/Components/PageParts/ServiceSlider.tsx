@@ -4,8 +4,6 @@ import { default as con } from "../../../../assets/images/aboutus/consultancy.sv
 import { default as lic } from "../../../../assets/images/aboutus/license.svg";
 import { default as taxsave } from "../../../../assets/images/aboutus/tax_consultancy.svg";
 import { Container, Row, Col, ToggleButton, Card } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar } from "swiper";
 import { serviceContent } from "../../../../content/content";
 import { Markup } from "interweave";
 function ServiceSlider() {
@@ -97,6 +95,7 @@ function ServiceSlider() {
                     <Markup className="text-between" content={x.points} />
                   </div>
                 );
+              else return <></>;
             })}
           </>
         </Col>
