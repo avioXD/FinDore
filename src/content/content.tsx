@@ -171,3 +171,68 @@ export const serviceContent = [
     </ul>`,
   },
 ];
+
+export const pricingCardContent = [
+  {
+    key: "0",
+    type: "individual",
+    label: `Salary Income`,
+    price: `599`,
+    plans: ` <li>Income Tax Return filing for Salary Income</li>
+    <li>Includes income from House Property</li>
+    <li>Includes Dividend and Interest Income</li>
+    <li>Tax saving investment options</li>
+    <li>Tax deductions &amp; refunds</li>`,
+  },
+  {
+    key: "1",
+    type: "individual",
+    label: `Capital Gains`,
+    price: `1599`,
+    plans: ` <li>Capital gains from sale of property</li>
+    <li>Capital gains from sale of stocks &amp; mutual funds</li>
+    <li>Capital gains from lottery &amp; other winning</li>
+    <li>Tax saving advice on capital gains</li>`,
+  },
+  {
+    key: "2",
+    type: "individual",
+    label: `Non Residents`,
+    price: `2999`,
+    plans: ` <li>Includes everything from Capital Gains plan</li>
+    <li>Income earned outside India</li>
+    <li>Income earned in India by Non resident</li>
+    <li>Tax relief / credit under DTAA</li>`,
+  },
+  {
+    key: "3",
+    type: "business",
+    label: `Company Incorporation`,
+    price: `7499`,
+    plans: `  <li>Incorporation of Private limited company</li>
+    <li>Filing of SPICe form</li>
+    <li>Name Approval in RUN</li>
+    <li>Digital Signature for 2 directors</li>
+    <li>Government fees and stamp duty included for Authorized capital upto Rs 1 lakh</li>`,
+  },
+  {
+    key: "4",
+    type: "business",
+    label: `GST Registration and filing - Annual`,
+    price: `11999`,
+    plans: `<li>GST Registration for a new business</li>
+    <li>Filing of monthly return - GSTR 1 and GSTR 3B for complete financial year</li>
+    <li>Reconciliation of Input Tax credit with GSTR 2B</li>
+    <li>Filing of Annual return - GSTR 9</li>`,
+  },
+  {
+    key: "5",
+    type: "business",
+    label: `GST Registration and Filing - Quarter`,
+    price: `2999`,
+    plans: `    <li>Filing of monthly return - GSTR 1 and GSTR 3B for 3 months</li>
+    <li>Reconciliation of Input Tax credit with GSTR 2B</li>
+    <li>Review of ITC credit to optimize tax liability</li>
+    <li>Both Sales &amp; Purchase return covered</li>`,
+  },
+];

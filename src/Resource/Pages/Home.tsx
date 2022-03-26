@@ -26,6 +26,7 @@ import { default as happycustomer } from "../../assets/images/us/happycustomer.s
 import { hero_swiper_content, pricingCards } from "../../content/content";
 import RequestToUs from "./Components/PageParts/RequestToUs";
 import WhyUsSlider from "./Components/PageParts/WhyUsSlider";
+import HowWeWork from "./Components/PageParts/HowWeWork";
 
 const CardComp = (props) => {
   return (
@@ -296,6 +297,7 @@ export const Home = () => {
             </Row>
           </Container>
         </Container>
+        <HowWeWork />
         <RequestToUs />
       </Container>
     </>

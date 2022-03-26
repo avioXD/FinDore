@@ -22,7 +22,7 @@ function NavigationBar() {
                 <Link className="nav-link" to="/about">
                   About Us
                 </Link>
-                <Link className="nav-link" to="#action2">
+                <Link className="nav-link" to="/pricing">
                   Services & Pricing
                 </Link>
                 <Link className="nav-link" to="#">
