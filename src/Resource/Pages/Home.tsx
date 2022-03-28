@@ -32,7 +32,10 @@ const CardComp = (props) => {
   return (
     <Card style={{ width: "18rem" }} className="designed-background">
       <Card.Body>
-        <Card.Title className="text-between">{props.value.label}</Card.Title>
+        {/* <img src={props.value.svg} className="mx-auto w-h-10" alt="" /> */}
+        <Card.Title className="text-between  mb-4">
+          {props.value.label}
+        </Card.Title>
         <Card.Text>{props.value.content}</Card.Text>
       </Card.Body>
     </Card>

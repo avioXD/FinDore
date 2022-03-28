@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { default as heroImg } from "../../assets/images/loginHero.svg";
+import { default as heroImg } from "../../assets/images/registerHero.svg";
 import { default as googleLogin } from "../../assets/images/google-login.svg";
 import {
   Container,
@@ -17,8 +17,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-
-function Login() {
+function Register() {
   return (
     <Container fluid className="doted-background">
       <Container className="mx-auto h-100  p-2   ">
@@ -26,30 +25,25 @@ function Login() {
           <Col sm={12}>
             <Card className="card-list-group">
               <Card.Header>
-                <h2 className="h-2">Login</h2>
+                <h2 className="h-2">Register</h2>
               </Card.Header>
 
               <Card.Body>
                 <Row>
-                  <Col sm={6} className="flex-center flex-column">
-                    <img src={heroImg} alt="" />
-                    <Col sm={12} className="mb-3">
-                      <div className="d-flex justify-content-center align-item-center">
-                        <p className="text-primary">Follow us on </p>
-                        <FaFacebook className="m-icon-dark" />
-                        <FaTwitter className="m-icon-dark" />
-                        <FaInstagram className="m-icon-dark" />
-                        <FaLinkedinIn className="m-icon-dark" />
-                      </div>
-                    </Col>
-                  </Col>
-                  <Col sm={5} className=" mt-4">
+                  <Col xs={{ order: "last" }} sm={5} className=" mt-4">
                     <h3 className="text-primary title-primary text-center">
-                      To stay connected, Login with your personal details.
+                      Enter your details and start your journey with us.
                     </h3>
-                    <div className="mx-auto m-w-30 mt-4 mb-3">
+                    <div className="mx-auto m-w-30 mt-4 mb-5">
                       <Form>
                         <Form.Group className="" controlId="formBasicEmail">
+                          <FloatingLabel
+                            className="mb-3"
+                            controlId="floatingName"
+                            label="Name"
+                          >
+                            <Form.Control type="text" placeholder="Name" />
+                          </FloatingLabel>
                           <FloatingLabel
                             className="mb-3"
                             controlId="floatingEmail"
@@ -58,12 +52,31 @@ function Login() {
                             <Form.Control type="mail" placeholder="Email" />
                           </FloatingLabel>
                           <FloatingLabel
+                            className="mb-3"
+                            controlId="floatingPhone"
+                            label="Phone"
+                          >
+                            <Form.Control type="number" placeholder="Phone" />
+                          </FloatingLabel>
+
+                          <FloatingLabel
+                            className="mb-3"
                             controlId="floatingPassword"
                             label="Password"
                           >
                             <Form.Control
                               type="password"
                               placeholder="Password"
+                            />
+                          </FloatingLabel>
+                          <FloatingLabel
+                            className="mb-3"
+                            controlId="floatingCPassword"
+                            label="Confirm Password"
+                          >
+                            <Form.Control
+                              type="password"
+                              placeholder="Confirm Password"
                             />
                           </FloatingLabel>
                         </Form.Group>
@@ -73,18 +86,12 @@ function Login() {
                             className="m-btn  "
                             type="submit"
                           >
-                            Login
+                            Register
                           </Button>
-                          <Link
-                            className="text-link mt-3"
-                            to={"/resetpassword"}
-                          >
-                            Forgot Password?
-                          </Link>
                           <p className="title-secondary text-between mt-3">
-                            New User?{" "}
-                            <Link className="text-link" to={"/register"}>
-                              Register Now
+                            Already user?{" "}
+                            <Link className="text-link" to={"/login"}>
+                              Login Now
                             </Link>
                           </p>
                         </div>
@@ -100,6 +107,18 @@ function Login() {
                       </div>
                     </div>
                   </Col>
+                  <Col sm={6} className="flex-center flex-column">
+                    <img src={heroImg} alt="" />
+                    <Col sm={12} className="mb-3">
+                      <div className="d-flex justify-content-center align-item-center">
+                        <p className="text-primary">Follow us on </p>
+                        <FaFacebook className="m-icon-dark" />
+                        <FaTwitter className="m-icon-dark" />
+                        <FaInstagram className="m-icon-dark" />
+                        <FaLinkedinIn className="m-icon-dark" />
+                      </div>
+                    </Col>
+                  </Col>
                 </Row>
               </Card.Body>
             </Card>
@@ -110,4 +129,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

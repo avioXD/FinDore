@@ -3,29 +3,37 @@ import { default as tax } from "../assets/images/why_us/tax.svg";
 import { default as support } from "../assets/images/why_us/support.svg";
 import { default as network } from "../assets/images/why_us/network.svg";
 import { default as online } from "../assets/images/why_us/online.svg";
-
+import { default as lic } from "../assets/images/aboutus/license.svg";
+import { default as taxsave } from "../assets/images/aboutus/tax_consultancy.svg";
+import { default as business } from "../assets/images/aboutus/businessgrow.svg";
+import { default as fin } from "../assets/images/aboutus/mission.svg";
 export const hero_swiper_content: any[] = [
   {
+    svg: tax,
     label: "Tax Return Filing",
     content: `The easiest, secure and most reliable way to get your Tax
       return filed with our affordable plans`,
   },
   {
+    svg: lic,
     label: "Licenses & Trademarks",
     content: `Hassle free drafting &amp; filing of Trademark
       application, all taken care of by our TM specialist.`,
   },
   {
+    svg: taxsave,
     label: "Tax Consultancy",
     content: `Our Tax Experts help you with will tax related problems
       to optimize your Tax liability`,
   },
   {
+    svg: fin,
     label: "Financial Consultancy",
     content: `Investment and wealth management advice customized to
       cater various risk profiles`,
   },
   {
+    svg: business,
     label: "Business Registrations",
     content: `You one stop shop to apply all your business and tax
       registrations at one place`,

@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-
+import { Link, useNavigate } from "react-router-dom";
 function FooterBar() {
   return (
     <Container fluid className="c-background p-3">
@@ -22,30 +22,25 @@ function FooterBar() {
           <Col sm={3}>
             <div className="flex-center flex-column text-start"></div>
             <h5 className="title-secondary text-primary-offset">Quick Links</h5>
-            <ul className="m-ul  ">
-              <li>
-                <a href="#">About Us </a>
-              </li>
-              <li>
-                {" "}
-                <a href="#">Services & Pricing</a>
-              </li>
-              <li>
-                {" "}
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                {" "}
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                {" "}
-                <a href="#">Resources</a>
-              </li>
-              <li>
-                {" "}
-                <a href="#">Calendar</a>
-              </li>
+            <ul className="m-ul">
+              <Link className="li" to="/home">
+                Home
+              </Link>
+              <Link className="li" to="/about">
+                About Us
+              </Link>
+              <Link className="li" to="/pricing">
+                Services & Pricing
+              </Link>
+              <Link className="li" to="#">
+                Blog
+              </Link>
+              <Link className="li" to="/contact">
+                Contact Us
+              </Link>
+              <Link className="li" to="/resource">
+                Resources
+              </Link>
             </ul>
           </Col>
           <Col sm={3}>

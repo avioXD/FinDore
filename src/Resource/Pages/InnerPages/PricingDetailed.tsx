@@ -1,12 +1,18 @@
 import React from "react";
 import { Container, Col, Row, Card, Form, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Other_Service } from "../../../content/OtherServices";
 import QueryForm from "../Components/PageParts/QueryForm";
-import { FaTags, FaServicestack } from "react-icons/fa";
+import { FaTags, FaServicestack, FaBoxes } from "react-icons/fa";
 function PricingDetailed() {
   let { _id } = useParams();
   let content = Other_Service.filter((x) => x._id === _id)[0];
+  const navigate = useNavigate();
+
+  const navigateTo = () => {
+    navigate(`/product/order/${_id}`);
+  };
+
   return (
     <Container fluid className=" ">
       <Container className="mx-auto p-2  ">
@@ -28,7 +34,7 @@ function PricingDetailed() {
               </Card.Header>
               <Card.Body>
                 <p className="text-secondary">
-                  <i className="pi pi-box"></i>
+                  <FaBoxes className="mx-2"></FaBoxes>
                   {content.about}
                 </p>
               </Card.Body>
@@ -41,7 +47,7 @@ function PricingDetailed() {
               <Card.Body>
                 {content.service.map((x) => (
                   <p className="text-secondary ">
-                    <i className="pi pi-box"></i>
+                    <FaBoxes className="mx-2"></FaBoxes>
                     {x.label}
                   </p>
                 ))}
@@ -55,7 +61,7 @@ function PricingDetailed() {
               <Card.Body>
                 {content.who_should_buy.map((x) => (
                   <p className="text-secondary ">
-                    <i className="pi pi-box"></i>
+                    <FaBoxes className="mx-2"></FaBoxes>
                     {x.label}
                   </p>
                 ))}
@@ -69,7 +75,7 @@ function PricingDetailed() {
               <Card.Body>
                 {content.doc_required.map((x) => (
                   <p className="text-secondary ">
-                    <i className="pi pi-box"></i>
+                    <FaBoxes className="mx-2"></FaBoxes>
                     {x.label}
                   </p>
                 ))}
@@ -100,7 +106,12 @@ function PricingDetailed() {
                   </Button>
                 </Form>
                 <div className="flex-center">
-                  <Button variant="primary" className="m-btn " type="submit">
+                  <Button
+                    variant="primary"
+                    onClick={navigateTo}
+                    className="m-btn "
+                    type="submit"
+                  >
                     BUY NOW
                   </Button>
                 </div>

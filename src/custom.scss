@@ -9,7 +9,7 @@ $color-50: #ffb78e;
 $white: #fffffe;
 $dark: #361c20;
 $dark-offset: #361c20cb;
-$success-color: #00c851;
+$success-color: #068b3b;
 $danger-color: #cc0000;
 $info-color: #33b5e5;
 $waring-color: #ffbb33;
@@ -191,7 +191,7 @@ img {
     outline: none;
     box-shadow: none;
     color: #ffffff;
-    filter: drop-shadow(0px 1px 10px $shadow-1);
+    filter: drop-shadow(0px 1px 5px $shadow-1);
   }
 }
 
@@ -205,7 +205,6 @@ img {
   &:focus {
     outline: none;
     box-shadow: none;
-    background-color: $color-200;
   }
   &:hover {
     outline: none;
@@ -213,7 +212,7 @@ img {
     box-shadow: none;
     color: $white;
     background-color: $color-200;
-    filter: drop-shadow(0px 1px 10px $shadow-1);
+    filter: drop-shadow(0px 1px 5px $shadow-1);
   }
 }
 
@@ -238,6 +237,17 @@ img {
   margin: 0rem 0.3rem;
   &:hover {
     color: $color-200;
+    cursor: pointer;
+  }
+}
+.m-icon-dark {
+  color: $color-200;
+  font-size: $s-3;
+
+  transition: all $transition-speed;
+  margin: 0rem 0.3rem;
+  &:hover {
+    color: $color-400;
     cursor: pointer;
   }
 }
@@ -437,14 +447,18 @@ p {
 //// list
 .m-ul {
   list-style: none;
-
+  .li,
   li {
     display: block;
     margin-left: -20px;
     font-family: $Outfit;
     font-weight: 400;
-
+    font-size: $s-5;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
     &:hover {
+      color: $color-50;
       a {
         color: $color-50;
       }

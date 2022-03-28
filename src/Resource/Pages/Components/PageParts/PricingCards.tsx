@@ -12,10 +12,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper";
 import { pricingCardContent } from "../../../../content/content";
 import { Markup } from "interweave";
+import { useNavigate } from "react-router-dom";
 
 function PricingCard() {
   const [radioValue, setRadioValue] = useState("individual");
-
+  const navigate = useNavigate();
+  const navigateTo = (_id) => {
+    navigate(`/product/order/${_id}`);
+  };
   const radios: any = [
     { name: "Individual", value: "individual" },
     { name: "Business", value: "business" },
@@ -116,6 +120,7 @@ function PricingCard() {
                         <Button
                           variant="primary"
                           className="  mt-2 m-btn mx-auto"
+                          onClick={() => navigateTo(x.key)}
                         >
                           Buy Now
                         </Button>

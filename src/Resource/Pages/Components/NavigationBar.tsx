@@ -26,6 +26,9 @@ function NavigationBar() {
             />
             <Navbar.Collapse id="navbarScroll">
               <Nav className="my-2  flex-center" navbarScroll>
+                <Link className="nav-link" to="/home">
+                  Home
+                </Link>
                 <Link className="nav-link" to="/about">
                   About Us
                 </Link>
@@ -40,9 +43,6 @@ function NavigationBar() {
                 </Link>
                 <Link className="nav-link" to="/resource">
                   Resources
-                </Link>
-                <Link className="nav-link" to="#">
-                  Calendar
                 </Link>
                 <div>
                   <Button

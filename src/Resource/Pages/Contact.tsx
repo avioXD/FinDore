@@ -5,7 +5,7 @@ import QueryForm from "./Components/PageParts/QueryForm";
 
 function Contact() {
   return (
-    <Container fluid className="doted-background ">
+    <Container fluid className="doted-background h-70">
       <Container className="mx-auto p-2 ">
         <Row>
           <Col sm={12}>
