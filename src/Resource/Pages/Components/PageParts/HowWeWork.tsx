@@ -23,7 +23,7 @@ function HowWeWork() {
     },
     {
       status: `Talk to our CA`,
-      process: `FinTaxTic now assigns a tax expert, who would advice you on tax saving.`,
+      process: `KPIAFILING now assigns a tax expert, who would advice you on tax saving.`,
       icon: "pi pi-users",
       color: "#ff725e",
       svg: taktoca,

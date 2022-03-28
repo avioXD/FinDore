@@ -12,7 +12,7 @@ function WhyUsSlider() {
           <img src={whyus} className="w-h-10 p-1" alt="" />
           <h1 className="title-secondary h-2   animate-char-dark">Why Us!</h1>
           <p className="text-sm text-secondary">
-            At FinTaxTic, our aim is to change the way people look at tax and
+            At KPIAFILING, our aim is to change the way people look at tax and
             financial services. We want to increase financial & Tax literacy so
             that people become more aware of Indian tax laws & rules with
             adequate income tax consultancy and take better decisions. Likewise,

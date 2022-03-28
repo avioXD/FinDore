@@ -23,7 +23,7 @@ function About() {
                 Focused on trouble free Financial solutions!
               </p>
               <p className="text-sm p-2">
-                FinTaxTic is a finance and tax advisory start-up conceived and
+                KPIAFILING is a finance and tax advisory start-up conceived and
                 founded with a vision of making India more Tax & Financially
                 literate. We feel that knowledge should be free and everyone
                 should have access to it. Our mission is to make India more
@@ -49,7 +49,7 @@ function About() {
                 understand their personal and business financial needs and help
                 them achieve their goals in a very planned manner. So, let’s
                 build and grow India together one step at a time. Let’s be
-                FinTaxtic !!
+                KPIAFILIER !!
               </p>
             </div>
           </Col>

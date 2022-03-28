@@ -205,7 +205,7 @@ export const Home = () => {
                   Focused on trouble free Fin-ancial solutions!
                 </h5>
                 <p className="text-sm">
-                  FinTaxTic is a finance and tax advisory start-up conceived and
+                  KPIAFILING is a finance and tax advisory start-up conceived and
                   founded with a vision of making India more Tax & Financially
                   literate. As a financial advisory, we feel that knowledge
                   should be free and everyone should have access to it. It is in
