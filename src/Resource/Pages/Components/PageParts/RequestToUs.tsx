@@ -40,28 +40,33 @@ function RequestToUs() {
                         </FloatingLabel>
                       </Col>
                     </Row>
-                    <Form.Select aria-label="Default select example">
-                      <option value="1">Service Required</option>
-                      <option value="TDS Return">TDS Return</option>
-                      <option value="GST Return">GST Return</option>
-                      <option value="Business Registrations">
-                        Business Registrations
-                      </option>
-                      <option value="Digital Signature">
-                        Digital Signature
-                      </option>
-                      <option value="Business Incorporation">
-                        Business Incorporation
-                      </option>
-                      <option value="MCA Compliance">MCA Compliance</option>
-                      <option value="Income Tax">Income Tax</option>
-                      <option value="Consultancy Services">
-                        Consultancy Services
-                      </option>
-                      <option value="Miscellaneous Services">
-                        Miscellaneous Services
-                      </option>
-                    </Form.Select>
+                    <FloatingLabel
+                      controlId="floatingSelect"
+                      label="Service Required"
+                    >
+                      <Form.Select aria-label="Default select example">
+                        <option value="TDS Return">TDS Return</option>
+                        <option value="GST Return">GST Return</option>
+                        <option value="Business Registrations">
+                          Business Registrations
+                        </option>
+                        <option value="Digital Signature">
+                          Digital Signature
+                        </option>
+                        <option value="Business Incorporation">
+                          Business Incorporation
+                        </option>
+                        <option value="MCA Compliance">MCA Compliance</option>
+                        <option value="Income Tax">Income Tax</option>
+                        <option value="Consultancy Services">
+                          Consultancy Services
+                        </option>
+                        <option value="Miscellaneous Services">
+                          Miscellaneous Services
+                        </option>
+                      </Form.Select>
+                    </FloatingLabel>
+
                     <FloatingLabel
                       controlId="floatingComments"
                       label="Comments"

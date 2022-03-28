@@ -6,13 +6,11 @@ import { whyUsContent } from "../../../../content/content";
 import { default as whyus } from "../../../../assets/images/why_us/whyus.svg";
 function WhyUsSlider() {
   return (
-    <Container className="mx-auto p-2">
+    <Container className="mx-auto p-2 mt-5">
       <Row>
         <Col sm={12}>
           <img src={whyus} className="w-h-10 p-1" alt="" />
-          <h1 className="title-secondary h-2 mt-5 animate-char-dark">
-            Why Us!
-          </h1>
+          <h1 className="title-secondary h-2   animate-char-dark">Why Us!</h1>
           <p className="text-sm text-secondary">
             At FinTaxTic, our aim is to change the way people look at tax and
             financial services. We want to increase financial & Tax literacy so
@@ -54,7 +52,7 @@ function WhyUsSlider() {
             <>
               {" "}
               <SwiperSlide className="flex-center  ">
-                <div className="card p-3 mt-4 h-100 designed-background">
+                <div className="card p-3 mt-4 h-50 designed-background">
                   <img src={x.img} alt="" className="w-h-15 mx-auto" />
                   <h6 className="subtitle-primary text-center">{x.label}</h6>
                   <p className="text-sm text-center">{x.content}</p>

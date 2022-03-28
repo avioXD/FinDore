@@ -103,7 +103,7 @@ function PricingCard() {
                 <>
                   {""}
                   <SwiperSlide className="flex-center">
-                    <div className="card-3d text-start flex-column  ">
+                    <div className="card-3d text-start flex-column   ">
                       <h3 className="subtitle-primary animate-char  bold">
                         {x.label}
                       </h3>

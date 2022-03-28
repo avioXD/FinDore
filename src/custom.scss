@@ -246,6 +246,27 @@ i {
   margin-left: 0.3rem;
   margin-right: 0.3rem;
 }
+p {
+  margin: 0;
+}
+.m-w-30 {
+  max-width: 30rem;
+}
+.h-50 {
+  min-height: 50vh;
+}
+.h-100 {
+  min-height: 100vh;
+}
+.h-150 {
+  min-height: 150vh;
+}
+.h-70 {
+  min-height: 70vh;
+}
+.h-b {
+  font-size: 350%;
+}
 .h-1 {
   font-size: $s-1;
   font-weight: 800;
@@ -487,11 +508,11 @@ i {
     text-align: center;
     font-size: $s-3;
     color: $white;
-    font-family: $Outfit;
+    font-family: $Raleway;
     font-weight: 500;
   }
   .card-body {
-    padding: 0;
+    padding: 0.6rem;
     .item {
       cursor: pointer;
       padding: 0.8rem 1rem;
@@ -542,6 +563,28 @@ textarea {
 }
 .swiper-pagination-bullet-active {
   background-color: $color-200;
+}
+
+///////////According
+.accordion {
+  .accordion-button {
+    outline: none;
+    box-shadow: none;
+    color: $white;
+    background: $card-background-reverse;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background: $card-background;
+    }
+    &::after {
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 /////////////////time line
 .timeline-demo .custom-marker {

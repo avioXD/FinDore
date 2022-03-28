@@ -133,7 +133,7 @@ export const Home = () => {
                 <p className="text-white text-center">
                   Committed towards eminent tax & financial assistance!
                 </p>
-                <div className=" flex-center">
+                <div className=" flex-center mt-4">
                   <Button variant="thin" className="m-btn">
                     Plans and Pricing
                   </Button>

@@ -70,7 +70,7 @@ function Pricing() {
               <Col sm={3}>
                 <Card className="card-list-group">
                   <Card.Header>{val[0].type}</Card.Header>
-                  <Card.Body>
+                  <Card.Body className="p-0">
                     {val.map((item) => (
                       <div
                         className="item"

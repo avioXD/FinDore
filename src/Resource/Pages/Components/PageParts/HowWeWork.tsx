@@ -5,7 +5,6 @@ import { default as purchase } from "../../../../assets/images/how_we_work/purch
 import { default as upload } from "../../../../assets/images/how_we_work/uploaddocument.svg";
 import { default as taktoca } from "../../../../assets/images/how_we_work/talktoca.svg";
 import { default as filing } from "../../../../assets/images/how_we_work/filing.svg";
-import "./timeline.css";
 function HowWeWork() {
   const events1 = [
     {
@@ -69,7 +68,7 @@ function HowWeWork() {
         <Row>
           <Col sm={12} className="text-center">
             {" "}
-            <h1 className="title-primary h-1 animate-char-dark">
+            <h1 className="title-primary h-2 animate-char-dark">
               HOW DO WE WORK?
             </h1>
             <h4 className="text-between ">
@@ -77,7 +76,7 @@ function HowWeWork() {
             </h4>
           </Col>
           <Col sm={12}>
-            <div className="  p-4">
+            <div>
               <Timeline
                 value={events1}
                 align="alternate"
